@@ -13,6 +13,7 @@
 .directions {
     margin: 25px 0 0 10px;
     color: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .box {
     margin: 25px 0 0 10px;
@@ -36,6 +37,7 @@
     height: 30px;
     border-radius: 3px;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text {
@@ -46,4 +48,5 @@
     border: 2px solid grey;
     margin-top: 10px;
     padding-left: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
