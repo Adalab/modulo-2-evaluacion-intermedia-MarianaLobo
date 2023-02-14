@@ -7,11 +7,13 @@ const btnGame = document.querySelector('.js-btn');
 const userClues = document.querySelector('.js-clues');
 const numberTries = document.querySelector('.js-tries');
 
+const computerNumber = getRandomNumber(100);
 let round = 0;
 
 //GENERAR NÚMERO ALEATORIO
-
-const computerNumber = Math.ceil(Math.random() * 100);
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+}
 console.log(computerNumber);
 
 // COMPARAR
@@ -27,7 +29,7 @@ function compare() {
         userClues.innerHTML = "Has ganado campeona!!!";    
     }
 }  
- 
+
 //CONTADOR DE INTENTOS
 function counterRound(){
     round++;
@@ -36,7 +38,7 @@ function counterRound(){
 
 //EVENTO
 function handleClick(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     compare();
     counterRound();
 }
