@@ -16,30 +16,42 @@ function getRandomNumber(max) {
 }
 console.log(computerNumber);
 
+//ESCRIBIR PISTAS
+function writeClues(clue) {
+    userClues.innerHTML = clue;
+}
+
 // COMPARAR
 function compare() {
     const userNumber = parseInt(inputNumber.value);
-    if (userNumber > 100 || userNumber < 1) {
-        userClues.innerHTML = "El número debe estar entre 1 y 100";
+
+    counterRound(userNumber);
+
+    if (isNaN(userNumber) || userNumber === "") {
+        writeClues("Debes introducir un número");
+    }else if (userNumber > 100 || userNumber < 1) {
+        writeClues("El número debe estar entre 1 y 100");
     }else if (userNumber > computerNumber) {
-        userClues.innerHTML = "Demasiado alto";
+        writeClues("Demasiado alto");
     } else if (userNumber < computerNumber) {
-        userClues.innerHTML = "Demasiado bajo";
+        writeClues("Demasiado bajo");
     } else if (userNumber === computerNumber) {
-        userClues.innerHTML = "Has ganado campeona!!!";    
+        writeClues("Has ganado campeona!!!");    
     }
 }  
 
 //CONTADOR DE INTENTOS
-function counterRound(){
-    round++;
-    numberTries.innerHTML = + round;
+function counterRound(userNumber) {
+    if (userNumber !== computerNumber) {
+        round++;
+        numberTries.innerHTML = round;
+    }  
 }
 
 //EVENTO
 function handleClick(event) {
     event.preventDefault();
     compare();
-    counterRound();
+    
 }
 btnGame.addEventListener('click', handleClick);
