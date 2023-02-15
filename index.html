@@ -10,14 +10,15 @@
 <body>
     <main>
         <h1 class="title">Adivina el número</h1>
-        <p class="directions">Introduce aquí tu número:</p>
-        <div class="box">
-            <input class="user-number js-user-number" type="text" name="number">
+
+        <form class="box">
+            <label class="directions" for="userNumber">Introduce aquí tu número:</label>
+            <input class="user-number js-user-number" type="text" name="number" id="userNamber" value="" placeholder="por ejemplo, 15">
             <input class="btn js-btn" type="button" value="Prueba">
-        </div>
+        </form>
         
-        <p class=" text js-clues"></p>
-        <p class="text js-tries"></p>
+        <p class=" text js-clues">Pista: Escribe el número y dale a Prueba</p>
+        <p class="text">Número de intentos: <span class="js-tries">0</span></p>
 
     </main>
     <script src="./js/main.js"></script>

@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 //VARIABLES
 
@@ -33,7 +33,7 @@ function compare() {
 //CONTADOR DE INTENTOS
 function counterRound(){
     round++;
-    numberTries.innerHTML = "Número de intentos:" + round;
+    numberTries.innerHTML = + round;
 }
 
 //EVENTO
