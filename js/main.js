@@ -51,7 +51,7 @@ function counterRound(userNumber) {
 //EVENTO
 function handleClick(event) {
     event.preventDefault();
-    compare();
-    
+    compare();  
 }
+
 btnGame.addEventListener('click', handleClick);
